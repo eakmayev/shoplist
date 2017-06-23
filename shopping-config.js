@@ -16,7 +16,7 @@ var app = angular.module('myApp', ['ngRoute'])
 				controller: "HomeController"
 			})
 
-			.when('shopping-list',{
+			.when('/shopping-list',{
 				templateUrl: "views/shopping-list.html",
 				controller: "ShoppingListController",
 				controllerAs:"shoplist"

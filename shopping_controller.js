@@ -1,6 +1,6 @@
 angular.module('myApp')
 
-.controller('ShoppimgListController', ['$scope', 'ShoppimgListController', function($scope, ShoppimgListController){
+.controller('ShoppingListController', ['$scope', 'ShoppingListItems', function($scope, ShoppingListItems){
 	var shoplist = $scope;
 
 	shoplist.items = ShoppingListItems.getList();
@@ -10,13 +10,17 @@ angular.module('myApp')
 				name:shoplist.newItem.name,
 				qty: shoplist.newItem.qty,
 				priority: shoplist.newItem.priority
-				})
+				});
 
+			shoplist.newItem.name = "";
+			shoplist.newItem.qty = "";
+			shoplist.newItem.priority = "";
 	};
 
+
 	shoplist.removeItem = function(item){
-		var removeItem = shoplist.item.indexOf(item);
-		shoplist.item.splice(removeItem, 1)
+		var removedItem = shoplist.items.indexOf(item);
+		shoplist.items.splice(removedItem, 1)
 	};
 
 	shoplist.removeAll = function(){

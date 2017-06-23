@@ -11,3 +11,5 @@ angular.module('myApp')
 		getList: getList
 	}
 })
+
+//multiple files will be depended on this code

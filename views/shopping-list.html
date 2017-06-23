@@ -1,7 +1,8 @@
 <form ng-submit='addItem(newItem)' name="list">
 	<label>Item</label>
 	<input type="text" placeholder="Item" ng-model="newItem.name">
-	<label type="text" placeholder="Qty" ng-model="newItem.qty">
+	<label>Quantity</label>
+	<input type="number" placeholder="Qty" ng-model="newItem.qty">
 	<label>Priority</label>
 	<select ng-model="newItem.priority">
 		<option>low</option>
@@ -12,7 +13,7 @@
 
 </form>
 
-<p>{{list}}</p>
+<p>{}</p>
 <h3>Shopping List</h3>
 <button ng-click="order ='qty'">Order by Quantity</button>
 <button ng-click="order ='name'">Order by Name</button>
